@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <link href="file:///android_asset/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <link href="file:///android_asset/css/main.css" rel="stylesheet" media="screen"/>
+        <script src="file:///android_asset/js/jquery.min.js"></script>
+        <script src="file:///android_asset/js/bootstrap.min.js"></script>
+        <!-- <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <link href="../css/main.css" rel="stylesheet" media="screen"/>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script> -->
+    </head>
+    <body style="background-color: rgb(184, 184, 184)">
+        <center>
+        <div id="mainview"  style="background-color: rgb(255, 255, 255);margin:10pd 20pd 10pd 20pd;">
+              
+        </div>
+        </center>
+
+    </body>
+    <script>
+     $(document).ready(function(){
+
+          $("#mainview").append("<table>");
+         for(let i=0;i<10;i++){
+             let name="btn"+i;
+             
+            $("#mainview").append("<tr height=50><td>abandon</td><td>/abandon/</td><td>抛弃</td><td> <button id="+name+" class='btn btn-success'>收藏</button></td></tr>");
+         }
+         $("#mainview").append("</table>");
+           
+         
+          $(".btn").click(function(){
+          /* let tt=window.demo.getUserinfo();*/
+           alert(this.id);
+        });
+       });
+
+        
+      
+    </script>
+</html>
